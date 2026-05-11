@@ -1,0 +1,525 @@
+<!-- Nama : BENEDHICTUS KEVIN DONI BRILLIAN EVEREST
+     NIM  : L0124006 -->
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KaKev Company — Premium Coffee Chain</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+
+  <!-- =============================================
+       BRANCH SELECTOR MODAL
+  ============================================= -->
+  <div id="branchModal" class="branch-modal">
+    <div class="branch-modal__content">
+      <h1 class="branch-modal__title">Selamat Datang di <span>KaKev Company</span></h1>
+      <p class="branch-modal__subtitle">Pilih cabang terdekat Anda untuk memulai</p>
+      <div id="branchList" class="branch-grid"></div>
+      <p class="branch-modal__footer">Anda dapat mengubah cabang kapan saja melalui menu</p>
+    </div>
+  </div>
+
+  <!-- =============================================
+       NAVIGATION
+  ============================================= -->
+  <nav class="navbar">
+    <div class="navbar__logo">KaKev <span>Company</span></div>
+    <div class="navbar__branch-info" id="branchInfo">
+      <span class="navbar__branch-icon">📍</span>
+      <span class="navbar__branch-name" id="selectedBranchName">Pilih Cabang</span>
+      <button class="navbar__branch-change" id="changeBranchBtn" title="Ubah Cabang">⚙️</button>
+    </div>
+    <div class="navbar__theme-toggle">
+      <button id="themeToggleBtn" class="theme-toggle" title="Tukar tema">🌙</button>
+    </div>
+    <ul class="navbar__links">
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#reservasi">Reservasi</a></li>
+      <li><a href="#tentang">Tentang</a></li>
+      <li><a href="#chat" class="navbar__cta">Chat Admin</a></li>
+    </ul>
+  </nav>
+
+  <!-- =============================================
+       HERO
+  ============================================= -->
+  <section class="hero">
+    <div class="hero__inner">
+
+      <!-- Teks utama -->
+      <div class="hero__text">
+        <span class="hero__tag">🏆 Jaringan Coffee Shop Terlengkap</span>
+        <h1 class="hero__title">
+          Setiap <em>Tegukan</em><br />
+          adalah Pengalaman <em>Premium</em><br />
+          di KaKev Company
+        </h1>
+        <p class="hero__desc">
+          Dengan 5 cabang tersebar di Jakarta, kami menghadirkan biji kopi pilihan
+          dan pelayanan terbaik. Setiap cangkir disangrai dengan penuh cinta
+          dan ketelitian untuk pengalaman Anda.
+        </p>
+        <div class="hero__actions">
+          <a href="#menu" class="btn-primary">Lihat Menu Kami</a>
+          <a href="#reservasi" class="btn-outline">Buat Reservasi →</a>
+        </div>
+      </div>
+
+      <!-- Kartu visual -->
+      <div class="hero__visual">
+        <div class="hero__coffee-img">
+          <img src="Sample Gambar (1).jpg" alt="Visual Kopi KaKev" />
+        </div>
+        <div class="hero__stats">
+          <div class="stat">
+            <div class="stat__number">5</div>
+            <div class="stat__label">Cabang di Jakarta</div>
+          </div>
+          <div class="stat">
+            <div class="stat__number">10K+</div>
+            <div class="stat__label">Pelanggan</div>
+          </div>
+          <div class="stat">
+            <div class="stat__number">15 Thn</div>
+            <div class="stat__label">Pengalaman</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =============================================
+       MENU
+  ============================================= -->
+  <div class="menu-bg">
+    <div class="section" id="menu">
+      <div class="section__header">
+        <p class="section__tag">Pilihan Unggulan</p>
+        <h2 class="section__title">Menu <em>Istimewa</em> KaKev</h2>
+      </div>
+
+      <!-- Filter Kategori -->
+      <div class="menu__filters">
+        <button class="filter-btn active" data-filter="all">Semua</button>
+        <button class="filter-btn" data-filter="Coffee">Coffee</button>
+        <button class="filter-btn" data-filter="Non-Coffee">Non-Coffee</button>
+        <button class="filter-btn" data-filter="Dessert">Dessert</button>
+        <button class="filter-btn" data-filter="Meals">Meals</button>
+        <button class="filter-btn" data-filter="Main Course">Main Course</button>
+      </div>
+
+      <!-- Grid Layout: kartu menu -->
+      <div class="menu__grid" id="menuGrid">
+        <div class="menu-card loading-placeholder">
+          <div class="loading-spinner"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =============================================
+       ABOUT
+  ============================================= -->
+  <div id="tentang">
+    <div class="section">
+      <div class="about__inner">
+
+        <!-- Visual -->
+        <div class="about__visual">
+          <div class="about__img-wrap">
+            <div class="about__img-main">
+              <img src="Sample Gambar (2).jpg" alt="KaKev Company - Komitmen pada Kualitas" />
+            </div>
+            <div class="about__img-badge">
+              <strong>5</strong>
+              <span>Cabang</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Konten -->
+        <div class="about__content">
+          <div class="section__header">
+            <p class="section__tag">Tentang Kami</p>
+            <h2 class="section__title">
+              KaKev Company:<br />
+              <em>Komitmen</em> pada Kualitas
+            </h2>
+          </div>
+          <p class="about__body">
+            KaKev Company memulai perjalanan dengan visi sederhana: membawa pengalaman
+            kopi berkualitas tinggi ke seluruh Jakarta. Dengan 5 cabang yang tersebar strategis,
+            kami berkomitmen untuk memberikan pelayanan terbaik dan kopi premium setiap hari.
+          </p>
+
+          <!-- Grid 2 kolom fitur -->
+          <div class="about__features">
+            <div class="feature-item">
+              <span class="feature-item__icon">📍</span>
+              <div class="feature-item__text">
+                <strong>5 Lokasi Strategis</strong>
+                <span>Tersebar di seluruh Jakarta</span>
+              </div>
+            </div>
+            <div class="feature-item">
+              <span class="feature-item__icon">☕</span>
+              <div class="feature-item__text">
+                <strong>Kopi Premium</strong>
+                <span>Dipilih dari kebun terbaik</span>
+              </div>
+            </div>
+            <div class="feature-item">
+              <span class="feature-item__icon">🤝</span>
+              <div class="feature-item__text">
+                <strong>Tim Profesional</strong>
+                <span>Barista berpengalaman & ramah</span>
+              </div>
+            </div>
+            <div class="feature-item">
+              <span class="feature-item__icon">⚡</span>
+              <div class="feature-item__text">
+                <strong>Layanan Cepat</strong>
+                <span>Pesanan siap dalam 5 menit</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- =============================================
+       RESERVASI
+  ============================================= -->
+  <div class="reservasi-bg" id="reservasi">
+    <div class="section">
+      <div class="section__header">
+        <p class="section__tag">Pesan Tempat Anda</p>
+        <h2 class="section__title">Sistem <em>Reservasi</em> Online</h2>
+      </div>
+
+      <div class="reservasi-card">
+        <p class="about__body">
+          Pesan tempat di cabang favorit Anda dengan mudah. Tim kami akan mengkonfirmasi dalam waktu singkat.
+        </p>
+        <form class="reservasi-form" id="reservasiForm">
+          <div class="form-row">
+            <label>
+              Nama Lengkap
+              <input type="text" name="nama" placeholder="Contoh: Budi Santoso" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" placeholder="email@example.com" required />
+            </label>
+          </div>
+          
+          <div class="form-row">
+            <label>
+              Nomor Telepon
+              <input type="tel" name="phone" placeholder="08xx-xxxx-xxxx" required />
+            </label>
+            <label>
+              Tanggal Reservasi
+              <input type="date" name="tanggal" required />
+            </label>
+          </div>
+          
+          <div class="form-row">
+            <label>
+              Jam Reservasi
+              <input type="time" name="jam" required />
+            </label>
+            <label>
+              Jumlah Orang
+              <select name="jumlahOrang" required>
+                <option value="">-- Pilih Jumlah --</option>
+                <option value="1">1 Orang</option>
+                <option value="2">2 Orang</option>
+                <option value="3">3 Orang</option>
+                <option value="4">4 Orang</option>
+                <option value="5">5 Orang</option>
+                <option value="6+">6+ Orang</option>
+              </select>
+            </label>
+          </div>
+
+          <label>
+            Catatan Khusus
+            <textarea name="catatan" placeholder="Misal: Ada alergi, acara khusus, dll..."></textarea>
+          </label>
+
+          <button type="submit" class="btn-primary">Ajukan Reservasi</button>
+          <div class="form-status" id="reservasiStatus"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- =============================================
+       TESTIMONIALS
+  ============================================= -->
+  <div class="testimonials-bg" id="testimoni">
+    <div class="section">
+      <div class="section__header">
+        <p class="section__tag">Kata Mereka</p>
+        <h2 class="section__title">Pelanggan <em>Setia</em> KaKev</h2>
+      </div>
+
+      <!-- Grid Layout: kartu testimoni -->
+      <div class="testimonials__grid">
+
+        <div class="testi-card">
+          <div class="testi-card__stars">★★★★★</div>
+          <p class="testi-card__text">
+            "Kopi di KaKev sangat enak! Lokasi di Central Jakarta paling strategis
+            untuk saya. Service cepat dan staff-nya ramah banget!"
+          </p>
+          <div class="testi-card__author">
+            <div class="testi-card__avatar">A</div>
+            <div>
+              <div class="testi-card__name">Aldi Pratama</div>
+              <div class="testi-card__location">Jakarta Pusat</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-card__stars">★★★★★</div>
+          <p class="testi-card__text">
+            "Saya regular ke KaKev South Jakarta. Suasananya nyaman, kopi-nya konsisten,
+            dan harganya terjangkau untuk kualitas premium. Recommended!"
+          </p>
+          <div class="testi-card__author">
+            <div class="testi-card__avatar">S</div>
+            <div>
+              <div class="testi-card__name">Sari Dewi</div>
+              <div class="testi-card__location">Bandung</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-card__stars">★★★★★</div>
+          <p class="testi-card__text">
+            "KaKev Company punya 5 cabang? Saya sudah coba tiga cabang dan semuanya
+            sama baiknya. Kualitas terjaga konsisten di semua lokasi!"
+          </p>
+          <div class="testi-card__author">
+            <div class="testi-card__avatar">R</div>
+            <div>
+              <div class="testi-card__name">Rizki Hamdani</div>
+              <div class="testi-card__location">Jakarta Timur</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- =============================================
+       ORDER SECTION
+  ============================================= -->
+  <div class="section section--order" id="pesan">
+    <div class="section__header">
+      <p class="section__tag">Pesan Sekarang</p>
+      <h2 class="section__title">Pesanan <em>Delivery</em> & Takeaway</h2>
+    </div>
+    <div class="order-card">
+      <p class="about__body">
+        Pesan menu favorit Anda untuk diantar atau diambil di cabang terpilih. Isi form berikut dengan detail pesanan Anda.
+      </p>
+      <form class="order-form" id="orderForm">
+        <div class="form-row">
+          <label>
+            Nama Lengkap
+            <input type="text" name="nama" placeholder="Contoh: Budi Santoso" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" placeholder="email@example.com" required />
+          </label>
+        </div>
+
+        <label>
+          Menu Pilihan
+          <select name="menu" id="orderMenu" required>
+            <option value="">-- Pilih Menu --</option>
+          </select>
+        </label>
+
+        <div class="form-row">
+          <label>
+            Jumlah
+            <input type="number" name="jumlah" placeholder="1" min="1" required />
+          </label>
+          <label>
+            Tipe Pesanan
+            <select name="tipe" required>
+              <option value="takeaway">Takeaway</option>
+              <option value="delivery">Delivery</option>
+              <option value="dineIn">Dine In (Reservasi)</option>
+            </select>
+          </label>
+        </div>
+
+        <label>
+          Catatan Pesanan
+          <textarea name="catatan" placeholder="Misal: kurang manis, tanpa krim, dll..."></textarea>
+        </label>
+
+        <button type="submit" class="btn-primary">Kirim Pesanan via AJAX</button>
+        <div class="form-status" id="orderStatus"></div>
+      </form>
+    </div>
+  </div>
+
+  <!-- =============================================
+       CHAT ADMIN
+  ============================================= -->
+  <div class="chat-bg" id="chat">
+    <div class="section">
+      <div class="section__header">
+        <p class="section__tag">Hubungi Kami</p>
+        <h2 class="section__title">Live Chat dengan <em>Admin</em></h2>
+      </div>
+
+      <div class="chat-container">
+        <div class="chat-box">
+          <div class="chat-header">
+            <h3>KaKev Company Support</h3>
+            <span class="online-indicator">🟢 Online</span>
+          </div>
+          <div class="chat-messages" id="chatMessages">
+            <div class="chat-message admin-message">
+              <p>Halo! 👋 Selamat datang di KaKev Company. Ada yang bisa kami bantu?</p>
+              <span class="timestamp">Sekarang</span>
+            </div>
+          </div>
+          
+          <!-- Suggestion Buttons -->
+          <div class="chat-suggestions" id="chatSuggestions">
+            <div class="suggestion-label">Pilih topik untuk memulai:</div>
+            <div class="suggestion-buttons">
+              <button type="button" class="suggestion-btn" data-template-id="1">
+                <span class="suggestion-icon">📅</span>
+                <span>Cara Reservasi</span>
+              </button>
+              <button type="button" class="suggestion-btn" data-template-id="2">
+                <span class="suggestion-icon">⏰</span>
+                <span>Jam Operasional</span>
+              </button>
+              <button type="button" class="suggestion-btn" data-template-id="3">
+                <span class="suggestion-icon">☕</span>
+                <span>Menu & Harga</span>
+              </button>
+              <button type="button" class="suggestion-btn" data-template-id="4">
+                <span class="suggestion-icon">📍</span>
+                <span>Lokasi Cabang</span>
+              </button>
+              <button type="button" class="suggestion-btn" data-template-id="5">
+                <span class="suggestion-icon">🚚</span>
+                <span>Delivery & Takeaway</span>
+              </button>
+              <button type="button" class="suggestion-btn" data-template-id="6">
+                <span class="suggestion-icon">📱</span>
+                <span>Hubungi Kami</span>
+              </button>
+            </div>
+          </div>
+          
+          <form class="chat-input-form" id="chatForm">
+            <input 
+              type="text" 
+              id="chatInput" 
+              placeholder="Atau ketik pertanyaan Anda..." 
+              autocomplete="off"
+            />
+            <button type="submit" title="Kirim">📤</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =============================================
+       FOOTER
+  ============================================= -->
+  <footer class="footer">
+
+    <!-- Grid Layout: kolom footer -->
+    <div class="footer__grid">
+
+      <div>
+        <div class="footer__brand-name">KaKev Company</div>
+        <p class="footer__brand-desc">
+          Menghadirkan pengalaman kopi premium di 5 lokasi strategis di Jakarta.
+          Setiap cangkir adalah kesempurnaan dalam setiap tegukan.
+        </p>
+        <div class="footer__socials">
+          <div class="social-btn">📘</div>
+          <div class="social-btn">📸</div>
+          <div class="social-btn">🐦</div>
+          <div class="social-btn">▶️</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer__col-title">Menu</div>
+        <ul class="footer__links">
+          <li><a href="#menu">Espresso</a></li>
+          <li><a href="#menu">Cold Brew</a></li>
+          <li><a href="#menu">Pour Over</a></li>
+          <li><a href="#menu">Non-Coffee</a></li>
+          <li><a href="#menu">Dessert</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer__col-title">Layanan</div>
+        <ul class="footer__links">
+          <li><a href="#tentang">Tentang Kami</a></li>
+          <li><a href="#pesan">Pesan Online</a></li>
+          <li><a href="#reservasi">Reservasi</a></li>
+          <li><a href="#chat">Chat Admin</a></li>
+          <li><a href="#">Karir</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer__col-title">Kontak</div>
+        <ul class="footer__links">
+          <li><a href="#" class="branch-contact">📍 Central Jakarta</a></li>
+          <li><a href="#" class="branch-contact">📍 South Jakarta</a></li>
+          <li><a href="#" class="branch-contact">📍 West Jakarta</a></li>
+          <li><a href="#" class="branch-contact">📍 East Jakarta</a></li>
+          <li><a href="#" class="branch-contact">📍 North Jakarta</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <span class="footer__copy">© 2024 KaKev Company. Semua hak dilindungi.</span>
+      <span class="footer__tagline">"Setiap Tegukan adalah Pengalaman Premium."</span>
+    </div>
+
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

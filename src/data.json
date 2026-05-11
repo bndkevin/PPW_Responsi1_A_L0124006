@@ -1,0 +1,241 @@
+{
+  "branches": [
+    {
+      "id": 1,
+      "name": "KaKev Central Jakarta",
+      "location": "Jl. Sudirman No. 12, Jakarta Pusat",
+      "phone": "(021) 555-1234",
+      "email": "central@kakevcompany.id",
+      "hours": "Senin-Jumat: 07.00-22.00 | Sabtu-Minggu: 08.00-23.00",
+      "image": "🏢",
+      "lat": -6.1944,
+      "lng": 106.8229
+    },
+    {
+      "id": 2,
+      "name": "KaKev South Jakarta",
+      "location": "Jl. Gatot Subroto No. 45, Jakarta Selatan",
+      "phone": "(021) 555-2345",
+      "email": "south@kakevcompany.id",
+      "hours": "Senin-Jumat: 07.30-22.30 | Sabtu-Minggu: 08.30-23.30",
+      "image": "☕",
+      "lat": -6.2297,
+      "lng": 106.7942
+    },
+    {
+      "id": 3,
+      "name": "KaKev West Jakarta",
+      "location": "Jl. Jendral Sudirman Blok M, Jakarta Barat",
+      "phone": "(021) 555-3456",
+      "email": "west@kakevcompany.id",
+      "hours": "Senin-Jumat: 08.00-21.00 | Sabtu-Minggu: 08.00-22.00",
+      "image": "🌟",
+      "lat": -6.2106,
+      "lng": 106.7969
+    },
+    {
+      "id": 4,
+      "name": "KaKev East Jakarta",
+      "location": "Jl. Jatinegara No. 88, Jakarta Timur",
+      "phone": "(021) 555-4567",
+      "email": "east@kakevcompany.id",
+      "hours": "Senin-Jumat: 06.30-21.30 | Sabtu-Minggu: 07.00-22.30",
+      "image": "🎯",
+      "lat": -6.1917,
+      "lng": 106.8822
+    },
+    {
+      "id": 5,
+      "name": "KaKev North Jakarta",
+      "location": "Jl. Yos Sudarso No. 123, Jakarta Utara",
+      "phone": "(021) 555-5678",
+      "email": "north@kakevcompany.id",
+      "hours": "Senin-Jumat: 07.00-20.00 | Sabtu-Minggu: 08.00-21.00",
+      "image": "🚀",
+      "lat": -6.1338,
+      "lng": 106.8233
+    }
+  ],
+  "menu": [
+    {
+      "id": 101,
+      "name": "Espresso Toraja",
+      "category": "Coffee",
+      "description": "Single origin biji Arabika Toraja dengan karakter dark chocolate dan lembut fruity aftertaste.",
+      "price": 28000,
+      "icon": "☕",
+      "badge": "Terlaris",
+      "image": "https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 102,
+      "name": "Kopi Susu Gula Aren",
+      "category": "Coffee",
+      "description": "Espresso Aceh Gayo berpadu susu segar dan gula aren, suguhan manis hangat yang full comfort.",
+      "price": 35000,
+      "icon": "🧋",
+      "badge": "Terlaris",
+      "image": "https://images.unsplash.com/photo-1559496417-e7f25cb247f3?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 103,
+      "name": "Cold Brew Mandailing",
+      "category": "Coffee",
+      "description": "Diseduh selama 18 jam dengan biji Mandailing Natal, menghasilkan rasa lembut rendah asam dan menyegarkan.",
+      "price": 32000,
+      "icon": "🥛",
+      "badge": "Dingin",
+      "image": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 104,
+      "name": "Pour Over Washed",
+      "category": "Coffee",
+      "description": "Pour over dengan biji washed Aceh Gayo, memberikan notes floral dan citrus yang jernih.",
+      "price": 42000,
+      "icon": "🫖",
+      "badge": "Spesial",
+      "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 105,
+      "name": "Latte Vanilla Oak",
+      "category": "Coffee",
+      "description": "Latte lembut dengan sirup vanilla oak dan foam krim yang harum, favorit untuk santai sore.",
+      "price": 36000,
+      "icon": "🍶",
+      "badge": "Baru",
+      "image": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 106,
+      "name": "Matcha Latte Flores",
+      "category": "Non-Coffee",
+      "description": "Matcha premium dengan susu oat, creamy dan menyegarkan serta cocok untuk break tanpa kafein.",
+      "price": 38000,
+      "icon": "🍵",
+      "badge": "Baru",
+      "image": "https://images.unsplash.com/photo-1515823064-d6e0c04616a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 107,
+      "name": "Berry Mint Refresher",
+      "category": "Non-Coffee",
+      "description": "Perpaduan buah berry segar dan mint, dingin dan ringan untuk penyegar suasana.",
+      "price": 34000,
+      "icon": "🧊",
+      "badge": "Segar",
+      "image": "Berry Mint Refresher.jpg"
+    },
+    {
+      "id": 108,
+      "name": "Lemon Tea Spark",
+      "category": "Non-Coffee",
+      "description": "Teh lemon segar dengan sedikit madu, pilihan pas untuk yang ingin rasa ringan dan citrusy.",
+      "price": 29000,
+      "icon": "🍋",
+      "badge": "Ringan",
+      "image": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 109,
+      "name": "Affogato Tradisi",
+      "category": "Dessert",
+      "description": "Espresso panas dituangkan ke es krim kelapa segar, jawaban manis untuk penutup istimewa.",
+      "price": 45000,
+      "icon": "🍨",
+      "badge": "Baru",
+      "image": "Affogato Tradisi.jpg"
+    },
+    {
+      "id": 110,
+      "name": "Tiramisu Kopi",
+      "category": "Dessert",
+      "description": "Layer cake klasik dengan krim mascarpone dan siraman espresso yang kaya karakter.",
+      "price": 52000,
+      "icon": "🍮",
+      "badge": "Favorit",
+      "image": "Tiramisu Kopi.jpg"
+    },
+    {
+      "id": 111,
+      "name": "Brownie Lava",
+      "category": "Dessert",
+      "description": "Brownie cokelat pekat dengan lelehan ganache hangat, cocok untuk pencinta cokelat intens.",
+      "price": 48000,
+      "icon": "🍫",
+      "badge": "Terlaris",
+      "image": "https://images.unsplash.com/photo-1607478900766-efe13248b125?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 112,
+      "name": "Almond Croissant",
+      "category": "Dessert",
+      "description": "Croissant lembut dengan isian almond khas Prancis, renyah dan kaya rasa.",
+      "price": 38000,
+      "icon": "🥐",
+      "badge": "Popular",
+      "image": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 113,
+      "name": "Chicken Caesar Salad",
+      "category": "Meals",
+      "description": "Salad segar dengan ayam panggang, crouton renyah, dan saus Caesar creamy.",
+      "price": 64000,
+      "icon": "🥗",
+      "badge": "Sehat",
+      "image": "https://images.unsplash.com/photo-1550304943-4f24f54ddde9?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 114,
+      "name": "Truffle Pasta",
+      "category": "Meals",
+      "description": "Pasta tagliatelle dengan saus krim truffle dan parutan keju parmesan, mewah namun nyaman.",
+      "price": 78000,
+      "icon": "🍝",
+      "badge": "Spesial",
+      "image": "Truffle Pasta.jpg"
+    },
+    {
+      "id": 115,
+      "name": "Wagyu Sandwich",
+      "category": "Meals",
+      "description": "Sandwich lapis wagyu premium dengan sayur segar dan saus aioli lembut.",
+      "price": 92000,
+      "icon": "🥪",
+      "badge": "Premium",
+      "image": "Wagyu Sandwich.jpg"
+    },
+    {
+      "id": 116,
+      "name": "Nasi Goreng Spesial",
+      "category": "Main Course",
+      "description": "Nasi goreng wangi dengan telur mata sapi, ayam suwir, irisan cabai, dan emping renyah.",
+      "price": 54000,
+      "icon": "🍛",
+      "badge": "Authentic",
+      "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 117,
+      "name": "Steak Tenderloin",
+      "category": "Main Course",
+      "description": "Steak tenderloin matang medium rare dengan jus rosemary dan sayur panggang premium.",
+      "price": 125000,
+      "icon": "🥩",
+      "badge": "Chef's Choice",
+      "image": "https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 118,
+      "name": "Salmon Teriyaki",
+      "category": "Main Course",
+      "description": "Salmon glazed teriyaki dengan nasi harum dan brokoli tumis, nikmat dan elegan.",
+      "price": 98000,
+      "icon": "🐟",
+      "badge": "Best Seller",
+      "image": "Salmon Teriyaki.jpg"
+    }
+  ]
+}
