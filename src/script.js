@@ -30,9 +30,11 @@ $(document).ready(function() {
 // =============================================
 // 1. LOAD APPLICATION DATA (AJAX)
 // =============================================
+const DATA_API_URL = 'https://raw.githubusercontent.com/bndkevin/PPW_Responsi1_A_L0124006/main/src/data.json';
+
 function loadApplicationData() {
   $.ajax({
-    url: 'data.json',
+    url: DATA_API_URL,
     method: 'GET',
     dataType: 'json',
     success: function(data) {
@@ -48,9 +50,9 @@ function loadApplicationData() {
       // Populate order form menu options
       populateOrderForm();
     },
-    error: function() {
-      console.error('Error loading data.json');
-      showErrorNotification('Gagal memuat data aplikasi');
+    error: function(xhr, status, error) {
+      console.error('Error loading data from API:', error);
+      showErrorNotification('Gagal memuat data aplikasi dari API');
     }
   });
 }

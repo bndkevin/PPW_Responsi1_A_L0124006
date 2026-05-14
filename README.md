@@ -134,7 +134,7 @@ Fitur utama website meliputi:
 
 #### Implementasi AJAX:
 - ✓ **Data Loading (GET):**
-  - Load `data.json` untuk branches dan menu
+  - Load data dari external API endpoint (GitHub raw URL)
   - Parsing JSON response
   - Error handling
 
